@@ -1,0 +1,20 @@
+body{
+
+}
+
+.brand-logo{
+  height:100%;
+  width: 35%;
+}
+
+main{
+  margin: 1em;
+}
+
+.btn{
+  margin-bottom: 1em;
+}
+
+#errorMessageContainer{
+  display:none;
+}

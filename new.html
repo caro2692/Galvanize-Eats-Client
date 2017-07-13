@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Galvanize Reads</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+          <a href="#" class="brand-logo left"><img src="./logo.jpg" class="brand-logo" /></a>
+          <h5 class="center">Galvanize Reads</h5>
+          <a href="./books.html" class="right">Books</a>
+      </div>
+    </nav>
+    <main>
+      <div class="row" id="errorMessageContainer">
+        <div class="col s12 m12 center-align">
+          <div class="card pink">
+            <div class="card-content">
+                <span class="white-text" id="errorMessage"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <a class="waves-effect waves-light btn authors-btn"><i class="material-icons left">perm_identity</i>Authors</a>
+        <a class="waves-effect waves-light btn books-btn"><i class="material-icons left">library_books</i>Books</a>
+      </div>
+
+      <div class="row">
+        <form class="col s8">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="title" type="text" class="validate">
+              <label for="title">Title</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="genre" type="text" class="validate">
+              <label for="genre">Genre</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="cover_image" type="url" class="validate">
+              <label for="cover_image">Cover Image URL</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="description" type="text" class="materialize-textarea"></textarea>
+              <label for="description">Description</label>
+            </div>
+          </div>
+          <div class="input-field col s8">
+            <select multiple id="author-list" style="height:150px;" class="browser-default">
+            </select>
+          </div>
+          <div class="input-field col s8">
+            <select>
+              <option id="main-sibling" value="" disabled selected>Select an Author</option>
+            </select>
+          </div>
+          <a class="waves-effect waves-light btn authors-btn col s4 add-author-btn">Add Author</a>
+          <a class="waves-effect waves-light btn authors-btn col s12 add-book-btn">Add Book</a>
+
+        </form>
+      </div>
+
+
+    </main>
+
+  </body>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	<script type="text/javascript" src="./javascript/new.js" charset="utf-8"></script>
+  <script type="text/javascript" src="./javascript/shared.js" charset="utf-8"></script>
+
+</html>

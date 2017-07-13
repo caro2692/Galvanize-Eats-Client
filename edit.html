@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Galvanize Reads</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+          <a href="#" class="brand-logo left"><img src="./logo.jpg" class="brand-logo" /></a>
+          <h5 class="center">Galvanize Reads</h5>
+          <a href="./books.html" class="right">Books</a>
+      </div>
+    </nav>
+    <main>
+
+    </main>
+
+  </body>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	<script type="text/javascript" src="./javascript/edit.js" charset="utf-8"></script>
+  <script type="text/javascript" src="./javascript/shared.js" charset="utf-8"></script>
+  <script id="book-template" type="text/x-handlebars-template">
+   {{#each books}}
+   <div class="row">
+     <div class="image container col s3 offset-s2">
+       <img width = "75%" src={{cover_url}}>
+     </div>
+     <div class="col s5">
+       <div class="card row" data-id={{id}}>
+           <h4 class="col s8">{{title}}</h4>
+           <a class="btn-floating btn-small waves-effect waves-light red right edit-book-btn s2"><i class="material-icons">mode_edit</i></a>
+           <a class="btn-floating btn-small waves-effect waves-light red right delete-book-btn s2"><i class="material-icons">delete</i></a>
+           <h5 class="col s12">
+             By
+             {{#each authors}}
+               {{#if @last}}{{first_name}} {{last_name}}
+               {{else}} {{first_name}} {{last_name}} &
+               {{/if}}
+             {{/each}}
+           </h5>
+           <h5 class="col s12">Genre: {{genre}}</h5>
+           <p class="col s12">{{description}}</p>
+       </div>
+     </div>
+   </div>
+   {{/each}}
+  </script>
+</html>
